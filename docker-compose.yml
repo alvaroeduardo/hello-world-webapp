@@ -1,0 +1,13 @@
+version: '3'
+services:
+  apache:
+    image: httpd:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./meu-site:/usr/local/apache2/htdocs
+    networks:
+      - minha-rede
+
+networks:
+  minha-rede:
